@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z} | tv " " " /n" | -v "oo"
+echo {a..z} | tv " " "/n" | -v "oo"
