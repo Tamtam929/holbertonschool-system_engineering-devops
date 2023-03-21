@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
-# This script installs nginx on web-01 server
-# Listening on port 80
-# Returns string Hello World when queried at root
-
-sudo apt-get -y update
-sudo apt-get install -y nginx
-sudo ufw allow 'Nginx HTTP'
-sudo /etc/init.d/nginx restart
-sudo rm /var/www/html/*.html
-sudo echo "Hello World" | sudo tee /var/www/html/index.html
+# Install nginx on web-01 server
+sudo apt-get update -y && sudo apt upgrade -y
+sudo apt-get install nginx -y
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+service nginx start
