@@ -1,1 +1,19 @@
-1
+#!/usr/bin/env bash
+# Installs nginx on remote server & redirects
+
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install nginx
+mkdir /etc/nginx/html
+touch /etc/nginx/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html
+printf %s "server {
+    listen  80 default_server;
+    listen  [::]:80 default_server;
+    root    /etc/nginx/html;
+    index   index.html;
+    location /redirect_me {
+        return 301 http://5554.tech/;
+    }
+}" > /etc/nginx/sites-available/default
+service nginx restart
