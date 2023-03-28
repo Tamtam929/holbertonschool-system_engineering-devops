@@ -5,5 +5,4 @@ Host server
   User ubuntu
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile ./school
-  IdentitiesOnly yes
+  IdentityFile ~/.ssh/school
