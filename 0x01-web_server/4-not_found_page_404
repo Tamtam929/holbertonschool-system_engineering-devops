@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Installs nginx on remote server, redirects & gives 404 error
 
-apt-get -y update
-apt-get -y upgrade
-apt-get -y install nginx
+apt-get update
+apt-get upgrade -y
+apt-get install -y nginx
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html /etc/nginx/html/404.html
 echo "Hello World!" > /etc/nginx/html/index.html
