@@ -1,0 +1,19 @@
+What happens when you type https://www.holbertonschool.com in your browser and press Enter?
+When you type a URL into your browser and hit Enter, a lot happens behind the scenes before you see the web page you were looking for. In this blog post, we will take a look at the various steps involved in the process of loading a web page and explain what happens when you type https://www.holbertonschool.com into your browser.
+DNS request:
+The first step is to resolve the domain name into an IP address. This is done through the Domain Name System (DNS) lookup. The browser sends a DNS query to a DNS server asking for the IP address associated with the domain name www.holbertonschool.com. The DNS server responds with the IP address of the server that hosts the website.
+TCP/IP:
+The browser then initiates a TCP (Transmission Control Protocol) connection to the web server at the IP address obtained from the DNS server. The browser sends a SYN (synchronize) packet to the server, and the server responds with a SYN-ACK (synchronize-acknowledgment) packet. Finally, the browser sends an ACK (acknowledgment) packet, and the connection is established.
+Firewall:
+Before the browser can connect to the server, the request may need to pass through a firewall. A firewall is a security measure that controls access to a network. The firewall checks the request to ensure that it meets certain criteria, such as the destination IP address, the source IP address, and the port number.
+HTTPS/SSL:
+Once the connection is established, the browser and server perform a TLS/SSL handshake to establish a secure encrypted connection. HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, which is the protocol used for transferring data between the browser and server. The TLS/SSL handshake involves exchanging certificates and encryption keys to ensure that the data transmitted between the browser and server is secure.
+Load-balancer:
+The request may also need to pass through a load balancer before reaching the web server. A load balancer distributes incoming requests across multiple servers to ensure that no single server is overloaded. The load balancer may use various algorithms to determine which server should handle the request, such as round-robin, least connections, or IP hash.
+Web server:
+The web server receives the request from the browser and processes it. The server retrieves the requested web page and sends it back to the browser over the established TCP connection. The server may also perform other tasks, such as generating dynamic content, handling user authentication, or logging.
+Application server:
+In some cases, the web server may need to communicate with an application server to process the request. An application server is a server that hosts applications that can generate dynamic content. The web server sends the request to the application server, and the application server generates the dynamic content and sends it back to the web server, which then sends it back to the browser.
+Database:
+The application server may need to access a database to retrieve or store data. A database is a collection of data that is organized and stored in a way that allows it to be easily accessed, managed, and updated. The application server sends queries to the database to retrieve or store data as needed.
+In conclusion, when you type https://www.holbertonschool.com into your browser and press Enter, a complex sequence of steps occurs behind the scenes to retrieve and display the web page you were looking for. The process involves DNS lookup, TCP/IP connection, firewall, HTTPS/SSL encryption, load balancing, web server, application server, and database. Understanding how these different components work together is essential for building and maintaining web applications.
